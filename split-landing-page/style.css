@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+:root {
+  --left-bg-color: #FEE440;
+  --right-bg-color: #95CD41;
+  --btn-hover-opacity:80%;
+  --hover-width: 70%;
+  --other-width: 30%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow:hidden;
+  margin: 0;
+}
+
+h1{
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  margin: auto 0;
+
+}
+
+.btn{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50%;
+  margin-top: 20px;
+  transform: translateX(-50%);
+  text-decoration: none;
+  color: #fff;
+  border: #fff solid 0.2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 15rem;
+  padding: 1.5rem;
+
+}
+
+.split.left .btn:hover{
+  background-color: var(--left-bg-color);
+  opacity: var(--btn-hover-opacity);
+  border-color: var(--left-bg-color);
+}
+
+.split.right .btn:hover{
+  background-color: var(--right-bg-color);
+  opacity: var(--btn-hover-opacity);
+  border-color: var(--right-bg-color);
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 70%;
+}
+
+.split {
+  position: absolute;
+  padding-top:10%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  transition: width 2s, ease-in;
+}
+
+.split.left{
+  left: 0;
+  background-image: url("buntan.jpg");
+  background-repeat: no-repeat;
+  background-size:cover ;
+
+}
+
+
+.split.right{
+  right: 0;
+  background-image: url("sudachi.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.split.left,
+.split.right {
+transition: width 1s ease-in;
+}
+
+.hover-left .left{
+  width:var(--hover-width);
+}
+
+.hover-left .right {
+  width: var(--other-width);
+}
+
+.hover-right .right{
+  width:var(--hover-width);
+}
+
+.hover-right .left {
+  width: var(--other-width);
+}
