@@ -28,8 +28,13 @@ body {
   height: 50px;
   width: 50px;
   transition: width 0.3s ease;
+  caret-color: (0,0,0,0);
 }
 
+.search.active .input{
+  width: 200px;
+
+}
 .btn {
   background-color: #fff;
   border: 0;
@@ -48,9 +53,7 @@ body {
   outline: none;
 }
 
-.search.active .input{
-  width: 200px;
-}
+
 
 .search.active .btn{
   transform: translateX(198px);

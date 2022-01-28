@@ -12,6 +12,7 @@ const main = document.getElementById('main')
 const btn = document.getElementById('search-button')
 const search = document.getElementById('search')
 const headText = document.querySelector("header h2")
+
 getData(APIURL)
 async function getData(url) {
 
@@ -56,7 +57,7 @@ function changeColour(s){
   }
 }
 
-btn.addEventListener('click', (e) => {
+form.addEventListener('submit', (e) => {
     e.preventDefault()
     const searchTerm = search.value
      if(searchTerm && searchTerm !== '') {
@@ -69,4 +70,11 @@ btn.addEventListener('click', (e) => {
 
 headText.addEventListener('click', () => {
   window.location.reload()
+})
+
+btn.addEventListener('click', (e) => {
+  e.preventDefault()
+  search.classList.toggle('active')
+  btn.classList.toggle('active')
+  search.focus()
 })

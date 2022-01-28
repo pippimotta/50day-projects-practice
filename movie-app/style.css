@@ -19,6 +19,7 @@ body {
 }
 
 header {
+
   opacity: 0.9;
   position: fixed;
   top:0;
@@ -26,16 +27,16 @@ header {
   height: 30px;
   margin-bottom: 10px;
   z-index: 1;
+
 }
 
 .header {
-
   margin: -20px -20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--secondary-color);
-
+  height: 90px;
 }
 
 header h2 {
@@ -51,17 +52,29 @@ a {
 }
 
 .search {
-  border-radius: 50px;
   background-color: transparent;
-  border: 2px solid #fff;
   font: inherit;
   font-size: 1rem;
   padding: 0.5rem 1rem;
   color: #fff;
+  height: 40px;
+  width: 0px;
   position: absolute;
-  top:5px;
+  top:50%;
   right: 20px;
+  border: 0;
+  transition: 0.3s ease-in-out;
 }
+
+.search.active {
+  border-radius: 30px;
+  width: 200px;
+  border: 2px solid;
+  padding-left: 45px;
+
+}
+
+
 
 .search::placeholder {
   color: #eee;
@@ -83,15 +96,20 @@ a {
   cursor: pointer;
   font-size: 20px;
   position: absolute;
-  top:15px;
+  top:25px;
   right: 30px;
+  transition: transform 0.3s ease-in;
+}
+
+.btn.active {
+  transform: translateX(-150px);
 }
 
 main {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-top: 2.5rem;
+  margin-top: 80px;
 }
 .movie {
   width: 300px;
@@ -156,7 +174,7 @@ main {
   left: 0;
   bottom: 0;
   right: 0;
-  height: 50%;
+  height: 60%;
   overflow: scroll;
   transform: translateY(101%);
   transition: 0.3s ease-in;
