@@ -33,6 +33,7 @@ function updatePercentage(){
   if (fullCups == 0) {
     percentage.style.visibility = 'hidden'
     percentage.style.height = 0
+    liters.innerText = '2L'
   } else {
     percentage.style.visibility = 'visible'
     drinkPer = fullCups/totalCups*100
