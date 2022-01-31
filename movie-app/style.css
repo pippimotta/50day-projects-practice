@@ -156,14 +156,17 @@ main {
   color: lightgreen;
 }
 
+.movie-info span.red {
+  color: red;
+}
 .movie-info span.orange {
   color: orange;
 }
 
-.movie-info span.red {
-  color: red;
-}
 
+.movie:hover .overview {
+  transform: translateY(0);
+}
 .overview {
   opacity: 0.9;
   text-align: left;
@@ -178,8 +181,4 @@ main {
   overflow: scroll;
   transform: translateY(101%);
   transition: 0.3s ease-in;
-}
-
-.movie:hover .overview {
-  transform: translateY(0);
 }

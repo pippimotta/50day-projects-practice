@@ -68,6 +68,7 @@ form.addEventListener('submit', (e) => {
     }
 })
 
+
 headText.addEventListener('click', () => {
   window.location.reload()
 })
